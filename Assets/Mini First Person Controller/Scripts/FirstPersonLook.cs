@@ -13,6 +13,7 @@ public class FirstPersonLook : MonoBehaviour
 
     void Reset()
     {
+        // Bom dia aqui é o Bruno aprendendo a mexer no basico
         // Get the character from the FirstPersonMovement in parents.
         character = GetComponentInParent<FirstPersonMovement>().transform;
     }
