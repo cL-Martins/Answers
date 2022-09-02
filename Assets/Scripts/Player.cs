@@ -6,9 +6,10 @@ public class Player : MonoBehaviour
 {
     CharacterController controller;
     Vector3 forward, strafe, vertical;
-    public float forwardSpeed, strafeSpeed, forwardRunSpeed;
-    float gravity, jumpSpeed;
-    public float timeToMaxHeight = 0.5f;
+    public float forwardSpeed, strafeSpeed, forwardRunSpeed, staminaQtdLoss, staminaQtdGain, stamina;
+    float gravity, staminaMax, timeStamina;
+    bool running;
+    float timeToMaxHeight = 0.5f;
     public float distanceInteraction = 3;
 
     Transform cam;
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        staminaMax = stamina;
         controller = GetComponent<CharacterController>();
         cam = Camera.main.transform;
         gravity = (-2) / (timeToMaxHeight * timeToMaxHeight);
@@ -45,14 +47,39 @@ public class Player : MonoBehaviour
         float forwardInput = Input.GetAxisRaw("Vertical");
         float strafeInput = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButton("Fire3"))
+        // Sistema de Corrida, pretendo otimizar depois;
+        timeStamina += Time.deltaTime;
+        if (Input.GetButtonDown("Fire3"))
+        {
+            running = true;
+        }
+        if (Input.GetButtonUp("Fire3"))
+        {
+            running = false;
+        }
+        if (running)
         {
             forward = forwardInput * forwardRunSpeed * transform.forward;
+            if (timeStamina > 1 && stamina > 0)
+            {
+                stamina -= staminaQtdLoss;
+                timeStamina = 0;
+            }
+            if(stamina <= 0)
+            {
+                stamina = 0;
+                running = false;
+            }
         } else
         {
             forward = forwardInput * forwardSpeed * transform.forward;
+            if (timeStamina > 1 && stamina < staminaMax)
+            {
+                stamina += staminaQtdGain;
+                timeStamina = 0;
+            }
         }
-        
+        //Fim do sistema de corrida
         strafe = strafeInput * strafeSpeed * transform.right;
 
         vertical += gravity * Time.deltaTime * Vector3.up;
@@ -72,4 +99,5 @@ public class Player : MonoBehaviour
 
         controller.Move(finalVelocity * Time.deltaTime);
     }
+    
 }
