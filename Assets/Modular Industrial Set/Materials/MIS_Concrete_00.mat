@@ -111,7 +111,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _Glossiness: 0.5
-    - _Metallic: 0
+    - _Metallic: 0.5
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -153,7 +153,7 @@ Material:
     m_Colors:
     - Color_5aa17c67db4c41ae8259c6e320eefa94: {r: 0, g: 0, b: 0, a: 0}
     - Color_70ee4382b74b4940b54dc64d335c6f40: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Emissive: {r: 0, g: 0, b: 0, a: 0}
