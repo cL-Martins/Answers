@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public int ids;
-    public string[] names = new string[30];
-    public static GameController instance;
+    int ids;
+    string[] names = new string[30];
+    static GameController instance;
     // Start is called before the first frame update
     void Start()
     {

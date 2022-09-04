@@ -5,6 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     bool open;
+    [Tooltip("Coloque o nome da porta caso queiram atribuir uma tranca, do contrário deixem vazio")]
     public string doorName;
     public float openingDegrees = -120;
     public float step = 1;
