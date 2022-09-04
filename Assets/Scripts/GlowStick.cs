@@ -6,11 +6,11 @@ public class GlowStick : MonoBehaviour
 {
     public float duration = 50;
     float timer, intensity = 1.5f;
-    Light light;
+    Light lightG;
     // Start is called before the first frame update
     void Start()
     {
-        light = GetComponentInChildren<Light>();
+        lightG = GetComponentInChildren<Light>();
         timer = duration;
     }
 
@@ -29,7 +29,7 @@ public class GlowStick : MonoBehaviour
             }
             gameObject.layer = 8;
         }
-            light.intensity = intensity * timer / duration;
+            lightG.intensity = intensity * timer / duration;
             if(timer <= 0)
             {
             //GetComponent<Animator>().SetTrigger("New Trigger");
