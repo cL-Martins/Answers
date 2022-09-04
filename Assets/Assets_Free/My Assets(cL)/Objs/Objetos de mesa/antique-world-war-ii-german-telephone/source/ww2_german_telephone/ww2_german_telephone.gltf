@@ -1,0 +1,156 @@
+{
+    "asset" : {
+        "copyright" : "Ray Ferric",
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "ww2_german_telephone"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "ww2_german_telephone",
+            "normalTexture" : {
+                "index" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicRoughnessTexture" : {
+                    "index" : 2
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "ww2_german_telephone",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "ww2_german_telephone_normal",
+            "uri" : "textures/ww2_german_telephone_normal.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "ww2_german_telephone_albedo_opacity",
+            "uri" : "textures/ww2_german_telephone_albedo_opacity.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "ww2_german_telephone_occlusion_roughness_metallic",
+            "uri" : "textures/ww2_german_telephone_occlusion_roughness_metallic.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 31967,
+            "max" : [
+                0.18691043555736542,
+                0.13301433622837067,
+                0.13110989332199097
+            ],
+            "min" : [
+                -0.16645564138889313,
+                -0.0004487824917305261,
+                -0.19837971031665802
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 31967,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 31967,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 103734,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 383604,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 383604,
+            "byteOffset" : 383604
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 255736,
+            "byteOffset" : 767208
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 207468,
+            "byteOffset" : 1022944
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1230412,
+            "uri" : "ww2_german_telephone.bin"
+        }
+    ]
+}
