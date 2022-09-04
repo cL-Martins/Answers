@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/cL Scenes/cL_Menu_Test.unity
+    guid: 7930b2e200b0faa4f86afeacb5a39d73
+  - enabled: 1
     path: Assets/Scenes/cL Scenes/cL_Testes.unity
     guid: 14b05999108670146b0e282963098476
   m_configObjects: {}
