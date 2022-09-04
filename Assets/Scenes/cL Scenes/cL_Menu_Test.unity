@@ -422,9 +422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66cf749fd2cf5f4a8b6b006ec72634f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GrainStrange: 0.232
-  VignetteStrange: 62.5
-  JitterStrange: 0
+  GrainStrange: 0.1
+  VignetteStrange: 25
+  JitterStrange: 0.005
 --- !u!82 &963194230
 AudioSource:
   m_ObjectHideFlags: 0
