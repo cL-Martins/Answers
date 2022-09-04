@@ -8,7 +8,6 @@ public class MenuController : MonoBehaviour
 {
     VideoPlayer backGround;
     public GameObject buttons;
-    public string sceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +17,11 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        buttons.SetActive(backGround.time >= 9);
-        
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        buttons.SetActive(backGround.time >= 12);
+        if (backGround.time >= backGround.clip.length - 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
     public void PlayGame(string scene)
     {
