@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum Phases
+{
+    Control, DontControl
+}
 public class GameController : MonoBehaviour
 {
     int ids;
     string[] names = new string[30];
     static GameController instance;
+    public static Phases mode;
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+        mode = Phases.Control;
     }
 
     // Update is called once per frame
