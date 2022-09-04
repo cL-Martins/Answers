@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(BoxCollider))]
-public class Key : MonoBehaviour
+
+public class PaperNote : MonoBehaviour
 {
-    [Tooltip("Colocar o mesmo nome que está no script da porta")]
-    public string doorName;
+    NotesController notes;
+
+    public string message;
     // Start is called before the first frame update
     void Start()
     {
-        
+        notes = FindObjectOfType(typeof(NotesController)) as NotesController;
     }
 
     // Update is called once per frame
@@ -19,8 +20,7 @@ public class Key : MonoBehaviour
     }
     void Interaction()
     {
-        SoundEffects.PlaySound(SoundsList.CollectKey);
-        GameController.CollectKey(doorName);
+        notes.OpenNote(message);
         gameObject.SetActive(false);
     }
 }
