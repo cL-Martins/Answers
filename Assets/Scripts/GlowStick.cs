@@ -22,6 +22,11 @@ public class GlowStick : MonoBehaviour
             timer -= Time.deltaTime;
         } else
         {
+            if(gameObject.layer == 6)
+            {
+                gameObject.AddComponent<BoxCollider>();//Adicionar um limitador ainda
+                gameObject.AddComponent<Rigidbody>();
+            }
             gameObject.layer = 8;
         }
             light.intensity = intensity * timer / duration;
@@ -30,8 +35,7 @@ public class GlowStick : MonoBehaviour
             //GetComponent<Animator>().SetTrigger("New Trigger");
             //StartCoroutine("Off");
             transform.SetParent(null);
-            gameObject.AddComponent<BoxCollider>();//Adicionar um limitador ainda
-            gameObject.AddComponent<Rigidbody>();
+            
             }
 
     }
