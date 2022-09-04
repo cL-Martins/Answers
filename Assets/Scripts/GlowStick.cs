@@ -20,6 +20,9 @@ public class GlowStick : MonoBehaviour
         if (transform.parent)
         {
             timer -= Time.deltaTime;
+        } else
+        {
+            gameObject.layer = 8;
         }
             light.intensity = intensity * timer / duration;
             if(timer <= 0)

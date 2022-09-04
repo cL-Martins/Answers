@@ -22,7 +22,6 @@ public class GlowStickPack : MonoBehaviour
             if (tempPrefab)
             {
                 tempPrefab.transform.SetParent(null);
-                transform.SetParent(null);
                 tempPrefab.AddComponent<BoxCollider>();
                 tempPrefab.AddComponent<Rigidbody>();
             }
