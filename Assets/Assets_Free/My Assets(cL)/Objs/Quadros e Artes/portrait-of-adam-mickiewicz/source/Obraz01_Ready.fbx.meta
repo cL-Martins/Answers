@@ -3,7 +3,17 @@ guid: f4754fc6d4d08b44f86d834ba3de1dd0
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Obraz01
+    second: {fileID: 2100000, guid: 03cfc75cccf661f4f87dd658e8154b65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RamyLP
+    second: {fileID: 2100000, guid: 8979c385fe19cf645a61a054c64e6e32, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
