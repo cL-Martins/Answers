@@ -28,8 +28,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Controls();
-        RayCastInteraction();
+        if (GameController.mode.Equals(Phases.Control))
+        {
+            Controls();
+            RayCastInteraction();
+        }
     }
     void RayCastInteraction()
     {

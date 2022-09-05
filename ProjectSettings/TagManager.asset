@@ -13,8 +13,8 @@ TagManager:
   - Water
   - UI
   - IgnoreWalls
-  - 
-  - 
+  - Player
+  - IgnorePlayer
   - 
   - 
   - 

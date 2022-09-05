@@ -32,25 +32,27 @@ public class Cam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float verticalDelta = Input.GetAxisRaw("Mouse Y") * sensitivityY;
-        float horizontalDelta = Input.GetAxisRaw("Mouse X") * sensitivityX;
+        if (GameController.mode.Equals(Phases.Control))
+        {
+            float verticalDelta = Input.GetAxisRaw("Mouse Y") * sensitivityY;
+            float horizontalDelta = Input.GetAxisRaw("Mouse X") * sensitivityX;
 
-        //Suavização da câmera
-        smoothRotX = Mathf.Lerp(smoothRotX, horizontalDelta, smoothCoefx);
-        smoothRotY = Mathf.Lerp(smoothRotY, verticalDelta, smoothCoefy);
-        //
+            //Suavização da câmera
+            smoothRotX = Mathf.Lerp(smoothRotX, horizontalDelta, smoothCoefx);
+            smoothRotY = Mathf.Lerp(smoothRotY, verticalDelta, smoothCoefy);
+            //
 
-        //rotationX += horizontalDelta; Esses são da câmera bruta
-        //rotationY += verticalDelta;
-        rotationX += smoothRotX;
-        rotationY += smoothRotY;
+            //rotationX += horizontalDelta; Esses são da câmera bruta
+            //rotationY += verticalDelta;
+            rotationX += smoothRotX;
+            rotationY += smoothRotY;
 
-        rotationY = Mathf.Clamp(rotationY, angleYMin, angleYMax); // Limitar rotação da câmera entre dois valores
+            rotationY = Mathf.Clamp(rotationY, angleYMin, angleYMax); // Limitar rotação da câmera entre dois valores
 
-        characterBody.localEulerAngles = new Vector3(0, rotationX, 0);// Fazer o personagem se mover na direção para onde a câmera aponta
+            characterBody.localEulerAngles = new Vector3(0, rotationX, 0);// Fazer o personagem se mover na direção para onde a câmera aponta
 
-        transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
-
+            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+        }
 
         
     }
