@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6264181ee8e4043bd63aa455f92c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
   message: Tome cuidado
 --- !u!65 &1593932051
 BoxCollider:

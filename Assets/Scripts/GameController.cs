@@ -7,8 +7,12 @@ public enum Phases
 }
 public class GameController : MonoBehaviour
 {
-    int ids;
-    string[] names = new string[30];
+
+    int ids; //Id da ultima chave
+    string[] names = new string[30]; //Lista de Chaves
+    string[] notesDescription = new string[50];
+    string[] notesNames = new string[50];
+    int idsNotes;
     static GameController instance;
     public static Phases mode;
     // Start is called before the first frame update
@@ -21,6 +25,13 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+    
+    public static void RegisterNote(string name, string description)
+    {
+        instance.notesNames[instance.idsNotes] = name;
+        instance.notesDescription[instance.idsNotes] = description;
+        instance.idsNotes++;
     }
     public static void CollectKey(string doorName)
     {
