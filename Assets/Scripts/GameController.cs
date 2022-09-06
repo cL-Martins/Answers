@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
                 } else
                 {
                     Cursor.visible = false;
-                    //Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.lockState = CursorLockMode.Locked;
                 }
                 break;
             case Phases.DontControl:
