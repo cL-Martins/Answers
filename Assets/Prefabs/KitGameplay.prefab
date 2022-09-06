@@ -106,7 +106,7 @@ RectTransform:
   m_Children:
   - {fileID: 471433410}
   m_Father: {fileID: 1539660578}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -126,6 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 471433409}
+  notes: {fileID: 1960943066}
+  notesButton: {fileID: 7859071985944888007, guid: 5e4a71d2cc7a93c49a691ead06a0ee0c, type: 3}
+  notesList: []
 --- !u!1 &1080002336
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +159,7 @@ RectTransform:
   m_Children:
   - {fileID: 1709842539}
   m_Father: {fileID: 1539660578}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -206,8 +209,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1080002337}
   - {fileID: 716062352}
+  - {fileID: 1080002337}
   m_Father: {fileID: 1798208713907537391}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -968,7 +971,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6461361070876198098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 0.7721268, z: -7}
+  m_LocalPosition: {x: 1.19, y: 0.7721268, z: -20.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6461361072505055698}

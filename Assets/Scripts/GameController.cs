@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum Phases
 {
-    Control, DontControl
+    Control, DontControl, MouseActive
 }
 public class GameController : MonoBehaviour
 {
@@ -15,6 +15,11 @@ public class GameController : MonoBehaviour
     int idsNotes;
     static GameController instance;
     public static Phases mode;
+
+    public int IdsNotes { get => idsNotes; set => idsNotes = value; }
+    public string[] NotesNames { get => notesNames; set => notesNames = value; }
+    public string[] NotesDescription { get => notesDescription; set => notesDescription = value; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +30,20 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        switch (mode)
+        {
+            case Phases.Control:
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                break;
+            case Phases.DontControl:
+                break;
+            case Phases.MouseActive:
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                break;
+        }
     }
-    
     public static void RegisterNote(string name, string description)
     {
         instance.notesNames[instance.idsNotes] = name;
@@ -48,5 +65,21 @@ public class GameController : MonoBehaviour
                 break;
         }
         return haveKey;
+    }
+    public void SetMode(int phase)
+    {
+        switch (phase)
+        {
+            case 1:
+                mode = Phases.DontControl;
+                break;
+            case 0:
+                mode = Phases.Control;
+                break;
+            case 2:
+                mode = Phases.MouseActive;
+                break;
+        }
+        
     }
 }

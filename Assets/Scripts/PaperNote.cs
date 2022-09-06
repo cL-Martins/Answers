@@ -6,7 +6,7 @@ public class PaperNote : MonoBehaviour
 {
     NotesController notes;
 
-    public string name, message;
+    public string nameNote, message;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,10 @@ public class PaperNote : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     void Interaction()
     {
-        GameController.RegisterNote(name, message);
+        GameController.RegisterNote(nameNote, message);
         notes.OpenNote(message);
         gameObject.SetActive(false);
     }
