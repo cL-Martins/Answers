@@ -34,7 +34,7 @@ public class NotesInventory : MonoBehaviour
     }
     void OpenInventory()
     {
-        for(int i = 0; i < gc.IdsNotes; i++)
+        for (int i = 0; i < gc.IdsNotes; i++)
         {
             notesList = new GameObject[gc.IdsNotes];
             notesList[i] = Instantiate(notesButton, notes.transform);

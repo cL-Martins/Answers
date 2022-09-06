@@ -22,7 +22,7 @@ public class NotesController : MonoBehaviour
         {
             timer = 0;
         }
-        if (Input.GetButtonDown("Fire1") && note.activeSelf && timer > 1)
+        if (Input.GetButtonDown("Fire1") && note.activeSelf && timer > 0.1f)
         {
             note.SetActive(false);
             GameController.mode = Phases.Control;

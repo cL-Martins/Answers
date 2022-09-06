@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     string[] notesDescription = new string[50];
     string[] notesNames = new string[50];
     int idsNotes;
+    NotesInventory notesInventory;
     static GameController instance;
     public static Phases mode;
 
@@ -25,6 +26,7 @@ public class GameController : MonoBehaviour
     {
         instance = this;
         mode = Phases.Control;
+        notesInventory = FindObjectOfType(typeof(NotesInventory)) as NotesInventory;
     }
 
     // Update is called once per frame
@@ -33,8 +35,15 @@ public class GameController : MonoBehaviour
         switch (mode)
         {
             case Phases.Control:
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+                
+                if (notesInventory.inventory.activeSelf)
+                {
+                    mode = Phases.MouseActive;
+                } else
+                {
+                    Cursor.visible = false;
+                    //Cursor.lockState = CursorLockMode.Locked;
+                }
                 break;
             case Phases.DontControl:
                 break;
