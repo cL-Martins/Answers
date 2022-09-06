@@ -8,6 +8,9 @@ public class MenuController : MonoBehaviour
 {
     VideoPlayer backGround;
     public GameObject buttons;
+    public GameObject options;
+    public GameObject credits;
+    bool ativaMenu = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,19 +19,37 @@ public class MenuController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        buttons.SetActive(backGround.time >= 12);
+    {   
+        if (ativaMenu){
+            buttons.SetActive(backGround.time >= 12);
+        }else{
+            buttons.SetActive(false);
+        }
+        
         if (backGround.time >= backGround.clip.length - 1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
-    public void PlayGame(string scene)
+    public void PlayGame(int number)
     {
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(number);
     }
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void Options(){ //Mostra o Menu Opções
+        options.SetActive(true);
+        ativaMenu = false;
+    }
+    public void Credits(){ //Mostra o Menu Creditos
+        credits.SetActive(true);
+        ativaMenu = false;
+    }
+    public void backToMenu(){
+        options.SetActive(false);
+        credits.SetActive(false);
+        ativaMenu = true;
     }
 }
