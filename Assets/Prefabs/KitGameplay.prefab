@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f60d22cc13380e49927a1e903d3df58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowStickNumber: 3
+  glowStickNumber: 15
   glowStick: {fileID: 3599857450236722164, guid: 2d2eccf37ed3d3443a87320a43510cb1, type: 3}
 --- !u!1 &6461361072505055709
 GameObject:
