@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     CharacterController controller;
     Vector3 forward, strafe, vertical;
     public float forwardSpeed, strafeSpeed, forwardRunSpeed, staminaQtdLoss, staminaQtdGain, stamina;
-    float gravity, staminaMax, timeStamina;
+    float gravity, staminaMax, timeStamina, timerRaycastRefresh;
     bool running;
     float timeToMaxHeight = 0.5f;
     public float distanceInteraction = 3;
@@ -28,8 +28,15 @@ public class Player : MonoBehaviour
     {
         if (GameController.mode.Equals(Phases.Control))
         {
+            timerRaycastRefresh += Time.deltaTime;
             Controls();
-            RayCastInteraction();
+            if (timerRaycastRefresh > 0.1f)
+            {
+                RayCastInteraction();
+            }
+        } else
+        {
+            timerRaycastRefresh = 0;
         }
     }
     void RayCastInteraction()

@@ -19,6 +19,7 @@ public class Cam : MonoBehaviour
 
     float smoothCoefx = 0.5f;
     float smoothCoefy = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
