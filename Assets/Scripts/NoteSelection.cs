@@ -16,9 +16,9 @@ public class NoteSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originalColor = tmP.color;
         controller = FindObjectOfType(typeof(NotesController)) as NotesController;
         tmP = GetComponent<TextMeshProUGUI>();
+        originalColor = tmP.color;
     }
 
     // Update is called once per frame
