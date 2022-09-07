@@ -3,7 +3,17 @@ guid: a01f4b71560638e4bb31555ea1290c2d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VELVET-GREEN__Budapest_
+    second: {fileID: 2100000, guid: c21b9faa6f300cb409ad6c4eb3399e8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: carpet
+    second: {fileID: 2100000, guid: 72055cfc234d0c04ba33de0cee843973, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
