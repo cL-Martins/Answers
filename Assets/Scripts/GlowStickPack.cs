@@ -21,9 +21,7 @@ public class GlowStickPack : MonoBehaviour
             glowStickNumber--;
             if (tempPrefab)
             {
-                tempPrefab.transform.SetParent(null);
-                tempPrefab.AddComponent<BoxCollider>();
-                tempPrefab.AddComponent<Rigidbody>();
+                tempPrefab.GetComponent<GlowStick>().TakeOff();
             }
             tempPrefab = Instantiate(glowStick, transform);
         }

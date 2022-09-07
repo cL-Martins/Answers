@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 2161249448264640801}
   - component: {fileID: 2365635171279373265}
   - component: {fileID: 1722304126952445039}
+  - component: {fileID: 1704553561}
   m_Layer: 6
   m_Name: GlowStickObj
   m_TagString: Untagged
@@ -190,3 +191,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 15
+--- !u!95 &1704553561
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599857450236722164}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c55c749ae7274fa40b5fb91554841945, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

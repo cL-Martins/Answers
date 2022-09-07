@@ -1316,7 +1316,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1863927001}
-  - {fileID: 7953817337667042073}
   m_Father: {fileID: 1798208713907537391}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1429,33 +1428,3 @@ Transform:
   m_Father: {fileID: 6461361070876198102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7402891785006410940
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7953817337667042073}
-  m_Layer: 6
-  m_Name: GlowStickSlot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7953817337667042073
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7402891785006410940}
-  m_LocalRotation: {x: 0.38775188, y: 0.71086645, z: -0.5762222, w: 0.110839605}
-  m_LocalPosition: {x: 0.5267879, y: 0.027786747, z: 0.6925005}
-  m_LocalScale: {x: 100, y: 100.00004, z: 100.00003}
-  m_Children: []
-  m_Father: {fileID: 6461361072419666397}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 59.208, y: 167.608, z: 75.652}
