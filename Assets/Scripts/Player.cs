@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float forwardSpeed, strafeSpeed, forwardRunSpeed, staminaQtdLoss, staminaQtdGain, stamina;
     float gravity, staminaMax, timeStamina, timerRaycastRefresh;
     bool running;
+    public static float lightIntensity;
     float timeToMaxHeight = 0.5f;
     public float distanceInteraction = 3;
 

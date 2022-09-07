@@ -9,14 +9,12 @@ public class Load : MonoBehaviour
     TextMeshProUGUI tmP;
     public float timeTips;
     public string[] tips;
-    public GameObject pressStart;
     public Fade fade;
     int indice;
     bool created;
     // Start is called before the first frame update
     void Start()
     {
-        pressStart.SetActive(false);
         tmP = GetComponentInChildren<TextMeshProUGUI>();
         StartCoroutine("ChangeText");
     }
@@ -26,13 +24,8 @@ public class Load : MonoBehaviour
     {
         if (SceneManager.GetSceneByName("cL_Level_Scene").isLoaded)
         {
-            pressStart.SetActive(true);
-            if (Input.GetButtonDown("Jump"))
-            {
                 fade.FadeIn();
                 StartCoroutine("LoadGame");
-                
-            }
         }
     }
     IEnumerator ChangeText()
@@ -55,7 +48,7 @@ public class Load : MonoBehaviour
     }
     IEnumerator LoadGame()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         SceneManager.UnloadSceneAsync("Load");
     }
 }
