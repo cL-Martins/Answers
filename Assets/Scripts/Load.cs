@@ -10,6 +10,7 @@ public class Load : MonoBehaviour
     public float timeTips;
     public string[] tips;
     public GameObject pressStart;
+    public Fade fade;
     int indice;
     bool created;
     // Start is called before the first frame update
@@ -28,7 +29,9 @@ public class Load : MonoBehaviour
             pressStart.SetActive(true);
             if (Input.GetButtonDown("Jump"))
             {
-                SceneManager.UnloadSceneAsync("Load");
+                fade.FadeIn();
+                StartCoroutine("LoadGame");
+                
             }
         }
     }
@@ -42,12 +45,17 @@ public class Load : MonoBehaviour
         {
             indice = 0;
         }
-        yield return new WaitForSeconds(timeTips);
         if (!created)
         {
             SceneManager.LoadScene("cL_Level_Scene", LoadSceneMode.Additive);
             created = true;
         }
+        yield return new WaitForSeconds(timeTips);
         StartCoroutine("ChangeText");
+    }
+    IEnumerator LoadGame()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.UnloadSceneAsync("Load");
     }
 }
