@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: d5ac8d1be32673e4f9b826737872176e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f762c10ef46e7374fbb8914152259594, type: 3}
+  importSettings:
+    needsReimportForTextures: 0
+    materials: 1
+    shaderOverrides:
+      metallic: {instanceID: 0}
+      metallicBlend: {instanceID: 0}
+      specular: {instanceID: 0}
+      specularBlend: {instanceID: 0}
+    animationSettings:
+      useLegacyClips: 1
+      looping: 0
+      frameRate: 24
+      compressBlendShapeKeyFrames: 1
+      compressLinearAnimationKeyFrames: 1
+      minimumTranslationThreshold: 0.001
+      minimumRotationThreshold: 1
+      minimumScaleChangeThreshold: 0.01
+    generateLightmapUVs: 0
+    normals: 0
+    tangents: 0
+    animationType: 1
+    avatarDefinition: 1
+    avatar: {fileID: -332913546920706231, guid: d5ac8d1be32673e4f9b826737872176e, type: 3}
+    isDidimo: 1
+    interpolationMode: -1
