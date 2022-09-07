@@ -17,6 +17,7 @@ public class GlowStick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(lightG.intensity);
             timer -= Time.deltaTime;
             lightG.intensity = intensity * timer / duration;
             if(timer <= 0 && gameObject.layer == 6)
