@@ -3,7 +3,12 @@ guid: 3793061b78d2c2a44bd22bc8a2b4e69d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clock_mat
+    second: {fileID: 2100000, guid: 7dc6bb9351574b04a9043962f2a9c8fb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

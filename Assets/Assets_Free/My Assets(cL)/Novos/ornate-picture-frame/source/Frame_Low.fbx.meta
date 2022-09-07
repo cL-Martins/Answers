@@ -3,7 +3,47 @@ guid: 221f2070a1f06c343959a17ab1be9b30
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: f64acfe692a4a5c48b043f49f013005d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: back
+    second: {fileID: 2100000, guid: 7abc484cf8dcfa64aa6ed8514bc88efa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bracket
+    second: {fileID: 2100000, guid: 4e7dff4966075894cabcccfb7992b11c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clips
+    second: {fileID: 2100000, guid: 17823e57c3631924a952c36cd0c1d496, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor
+    second: {fileID: 2100000, guid: d82f373d73e0fa84b8848effaaba4765, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: dec372c12962b584ebfbc9a45d816b61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hinge
+    second: {fileID: 2100000, guid: a6a4d55df486eca48b723152c49e7437, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: photo
+    second: {fileID: 2100000, guid: 127b35da96920f4429c3a306bb070200, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
