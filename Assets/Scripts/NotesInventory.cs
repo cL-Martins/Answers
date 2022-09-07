@@ -22,7 +22,7 @@ public class NotesInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && !notesController.note.activeSelf)
+        if (Input.GetButtonDown("Jump") && !notesController.note.activeSelf && GameController.mode.Equals(Phases.Control))
         {
             inventory.SetActive(!inventory.activeSelf);
             if (inventory.activeSelf) 

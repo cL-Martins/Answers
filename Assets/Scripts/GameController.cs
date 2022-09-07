@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum Phases
 {
-    Control, DontControl, MouseActive
+    Control, DontControl, MouseActive, Load
 }
 public class GameController : MonoBehaviour
 {
@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         instance = this;
-        mode = Phases.Control;
+        mode = Phases.Load;
         notesInventory = FindObjectOfType(typeof(NotesInventory)) as NotesInventory;
     }
 
@@ -50,6 +50,12 @@ public class GameController : MonoBehaviour
             case Phases.MouseActive:
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
+                break;
+            case Phases.Load:
+                if (Input.GetButtonDown("Jump"))
+                {
+                    mode = Phases.Control;
+                }
                 break;
         }
     }
