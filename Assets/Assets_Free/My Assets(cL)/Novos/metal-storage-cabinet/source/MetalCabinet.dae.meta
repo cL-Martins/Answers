@@ -3,7 +3,32 @@ guid: 733f9c1bbee662f429eeb4e8fbaf5405
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_M01
+    second: {fileID: 2100000, guid: 45dd70144acc170458ed7db16931c74e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cardboard
+    second: {fileID: 2100000, guid: 492bcc185657ae040836beafce09bcab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material
+    second: {fileID: 2100000, guid: 30c5e30ca35eb894a917a9c02964b249, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_0
+    second: {fileID: 2100000, guid: 5170d6c9dc1f5734fa5ab47b7d28b2db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal02_diffuseOriginal
+    second: {fileID: 2100000, guid: 9c2a668ffef7c3a48b3360da255a3467, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,47 @@ guid: e0a2367dbb5455e4b8cb155ef8984ad3
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TEL_A_Label_blinn
+    second: {fileID: 2100000, guid: f159d501437070b4fbd2234313e07f29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tel_B_Label_blinn
+    second: {fileID: 2100000, guid: 558e6046a6229a242becd37a2b306798, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn1
+    second: {fileID: 2100000, guid: a18d9326fcfbc4a40ab81a1426ef4a50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn3
+    second: {fileID: 2100000, guid: 58e07ec4708206b45aee750495a6cd8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn4
+    second: {fileID: 2100000, guid: 0e69502bf86520b4884f961d17c2a62f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn5
+    second: {fileID: 2100000, guid: 56e9e1e37a0c3e64f93605b17fed33ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 8883911bd416f2147af11da19c2b46e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: f27d459f0e99caa4c80ef8790e2d3af5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
