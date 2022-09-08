@@ -36,7 +36,6 @@ public class Player : MonoBehaviour
         {
             lightIntensity = externalLight;
         }
-        print(lightIntensity);
         if (GameController.mode.Equals(Phases.Control))
         {
             timerRaycastRefresh += Time.deltaTime;

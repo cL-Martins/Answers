@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(mode);
         switch (mode)
         {
             case Phases.Control:

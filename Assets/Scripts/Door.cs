@@ -32,6 +32,12 @@ public class Door : MonoBehaviour
             
         }
     }
+    void OpenKeyBoard()
+    {
+        open = !open;
+        StopCoroutine("OpeningClosing");
+        StartCoroutine("OpeningClosing");
+    }
     IEnumerator OpeningClosing()
     {
         yield return new WaitForEndOfFrame();

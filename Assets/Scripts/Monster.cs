@@ -14,6 +14,7 @@ public class Monster : MonoBehaviour
     States ia;
     GameObject player;
     float distance, rangeFullShadow, timeDecision;
+
     // Start is called before the first frame update
     void Start()
     {
