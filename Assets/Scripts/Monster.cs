@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 public enum States
 {
@@ -31,6 +32,19 @@ public class Monster : MonoBehaviour
                 break;
             case States.Chasing:
                 agent.SetDestination(player.transform.position);
+                if(agent.remainingDistance <= agent.stoppingDistance + 5)
+                {
+                    if(Player.lightIntensity > 1)
+                    {
+                        ia = States.Walking;
+                        agent.destination = Vector3.zero;
+                        timeDecision = 3;
+                    }
+                }
+                if(agent.remainingDistance <= agent.stoppingDistance)
+                {
+                    SceneManager.LoadScene("GameOver");
+                }
                 break;
             case States.FullShadow:
 

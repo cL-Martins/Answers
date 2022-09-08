@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/cL Scenes/cL_Level_Scene.unity
     guid: 14b05999108670146b0e282963098476
+  - enabled: 1
+    path: Assets/Scenes/Rag Scenes/GameOver.unity
+    guid: 85c9de1149c3d664cb0d2c57226bcef1
   m_configObjects: {}

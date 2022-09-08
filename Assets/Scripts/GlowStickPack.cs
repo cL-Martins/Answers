@@ -7,7 +7,10 @@ public class GlowStickPack : MonoBehaviour
     public int glowStickNumber = 20;
     public GameObject glowStick;
     GameObject tempPrefab;
-    //GameObject[] gl
+    int indice;
+
+    public GameObject TempPrefab { get => tempPrefab; set => tempPrefab = value; }
+
     // Start is called before the first frame update
     void Start()
     {

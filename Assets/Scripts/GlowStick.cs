@@ -29,6 +29,7 @@ public class GlowStick : MonoBehaviour
     public void TakeOff()
     {
         gameObject.AddComponent<BoxCollider>();
+        gameObject.GetComponentInChildren<SphereCollider>().radius = lightG.intensity/100;
         gameObject.AddComponent<Rigidbody>();
         Destroy(GetComponent<Animator>());
         gameObject.layer = 8;

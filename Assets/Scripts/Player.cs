@@ -12,7 +12,9 @@ public class Player : MonoBehaviour
     public static float lightIntensity;
     float timeToMaxHeight = 0.5f;
     public float distanceInteraction = 3;
+    float externalLight;
 
+    public GlowStickPack glowPack;
     Transform cam;
 
     // Start is called before the first frame update
@@ -27,6 +29,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (glowPack.TempPrefab != null)
+        {
+            lightIntensity = glowPack.TempPrefab.GetComponentInChildren<Light>().intensity + externalLight;
+        } else
+        {
+            lightIntensity = externalLight;
+        }
+        print(lightIntensity);
         if (GameController.mode.Equals(Phases.Control))
         {
             timerRaycastRefresh += Time.deltaTime;
@@ -108,5 +118,19 @@ public class Player : MonoBehaviour
 
         controller.Move(finalVelocity * Time.deltaTime);
     }
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("GlowStick"))
+        {
+            externalLight += other.GetComponent<Light>().intensity;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("GlowStick"))
+        {
+            externalLight -= other.GetComponent<Light>().intensity;
+        }
+    }
+
 }
