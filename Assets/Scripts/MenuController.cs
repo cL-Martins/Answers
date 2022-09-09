@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
     public GameObject options;
     public GameObject credits;
     bool ativaMenu = true;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,9 @@ public class MenuController : MonoBehaviour
         }else{
             buttons.SetActive(false);
         }
-        
+        if (buttons.activeSelf){
+            anim.SetBool("buttonsActivaded",true);
+        }
         if (backGround.time >= backGround.clip.length - 1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
