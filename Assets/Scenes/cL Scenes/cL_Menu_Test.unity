@@ -1417,7 +1417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaa
+  m_text: tritanopia
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fffb0eacc6bb6704a9560b9d7cf8d8c6, type: 2}
   m_sharedMaterial: {fileID: -7813268867978097387, guid: fffb0eacc6bb6704a9560b9d7cf8d8c6, type: 2}
@@ -1532,7 +1532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -34}
+  m_AnchoredPosition: {x: -59.5, y: -34}
   m_SizeDelta: {x: 325, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &652397452
@@ -1803,11 +1803,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a98f4f2822a5e408e25410d811a870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 0}
-  protanopia: {fileID: 0}
-  deuteranopia: {fileID: 0}
-  tritanopia: {fileID: 0}
+  normal: {fileID: 2030397225}
+  protanopia: {fileID: 1465531060}
+  deuteranopia: {fileID: 2037339471}
+  tritanopia: {fileID: 7150435}
   audioMixer: {fileID: 24100000, guid: de92de78f32e79c439915ffccfb6ad55, type: 2}
+  daltonic: {fileID: 963194230}
 --- !u!1 &766472791
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,7 +2271,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.8, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2616,7 +2617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaa
+  m_text: deuteranopia
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fffb0eacc6bb6704a9560b9d7cf8d8c6, type: 2}
   m_sharedMaterial: {fileID: -7813268867978097387, guid: fffb0eacc6bb6704a9560b9d7cf8d8c6, type: 2}
@@ -2679,7 +2680,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -48.752533, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2839,7 +2840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7142495325459073065, guid: aad8fc95690d8a84584c70158aca3fda, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7142495325459073077, guid: aad8fc95690d8a84584c70158aca3fda, type: 3}
       propertyPath: m_Pivot.x
@@ -3193,7 +3194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaa
+  m_text: "N\xE3o Daltonico"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fffb0eacc6bb6704a9560b9d7cf8d8c6, type: 2}
   m_sharedMaterial: {fileID: -7813268867978097387, guid: fffb0eacc6bb6704a9560b9d7cf8d8c6, type: 2}
@@ -3256,7 +3257,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -52.172417, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3287,7 +3288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1273246300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3940,7 +3941,7 @@ GameObject:
   - component: {fileID: 1476152592}
   - component: {fileID: 1476152591}
   m_Layer: 5
-  m_Name: VolumeText
+  m_Name: ColorBlindText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3962,7 +3963,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -104, y: 0}
+  m_AnchoredPosition: {x: -41.6, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476152591
@@ -4554,7 +4555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaa
+  m_text: protanopia
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fffb0eacc6bb6704a9560b9d7cf8d8c6, type: 2}
   m_sharedMaterial: {fileID: -7813268867978097387, guid: fffb0eacc6bb6704a9560b9d7cf8d8c6, type: 2}
@@ -5335,8 +5336,8 @@ RectTransform:
   m_Father: {fileID: 694509426}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.8, y: 0}
+  m_AnchorMax: {x: 0.8, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
