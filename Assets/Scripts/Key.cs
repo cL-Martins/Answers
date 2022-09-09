@@ -19,6 +19,7 @@ public class Key : MonoBehaviour
     }
     void Interaction()
     {
+        print("oi");
         SoundEffects.PlaySound(SoundsList.CollectKey);
         GameController.CollectKey(doorName);
         gameObject.SetActive(false);

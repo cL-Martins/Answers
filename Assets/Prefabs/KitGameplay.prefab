@@ -1191,7 +1191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6461361070876198098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.19, y: 0.7721268, z: -20.5}
+  m_LocalPosition: {x: 1.19, y: 0.7721268, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6461361072505055698}
@@ -1284,6 +1284,7 @@ MonoBehaviour:
   staminaQtdGain: 2
   stamina: 100
   distanceInteraction: 3
+  glowPack: {fileID: 8481041589834033094}
 --- !u!1 &6461361072419666398
 GameObject:
   m_ObjectHideFlags: 0
