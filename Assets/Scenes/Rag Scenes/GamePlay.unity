@@ -973,17 +973,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &593006696 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8481041589834033094, guid: 0cb7bec39b0d1ef4fb3400681ce3da17, type: 3}
-  m_PrefabInstance: {fileID: 6461361072476630570}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f60d22cc13380e49927a1e903d3df58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &613116880
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,14 +3835,6 @@ PrefabInstance:
     - target: {fileID: 1798208713907537391, guid: 0cb7bec39b0d1ef4fb3400681ce3da17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6461361070876198099, guid: 0cb7bec39b0d1ef4fb3400681ce3da17, type: 3}
-      propertyPath: glowPack
-      value: 
-      objectReference: {fileID: 593006696}
-    - target: {fileID: 6461361070876198102, guid: 0cb7bec39b0d1ef4fb3400681ce3da17, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cb7bec39b0d1ef4fb3400681ce3da17, type: 3}
