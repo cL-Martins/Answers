@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
     public GameObject buttons;
     public GameObject options;
     public GameObject credits;
+    public GameObject fade;
     bool ativaMenu = true;
     public Animator anim;
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class MenuController : MonoBehaviour
         }
         if (buttons.activeSelf){
             anim.SetBool("buttonsActivaded",true);
+            fade.SetActive(false);
         }
         if (backGround.time >= backGround.clip.length - 1)
         {
