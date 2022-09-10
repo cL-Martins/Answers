@@ -3,7 +3,17 @@ guid: 8c773170572f3544b922e703a517d1e8
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: doorMat
+    second: {fileID: 2100000, guid: a33cde37d05a58443a960e3af13f2304, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ramaMat
+    second: {fileID: 2100000, guid: fffae5abad0c76c4da665274dc51a690, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -36,7 +46,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
