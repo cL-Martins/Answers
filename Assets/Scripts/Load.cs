@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -12,11 +13,13 @@ public class Load : MonoBehaviour
     public Fade fade;
     int indice;
     bool created;
+    VideoPlayer videoP;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         tmP = GetComponentInChildren<TextMeshProUGUI>();
-        StartCoroutine("ChangeText");
+        videoP = GetComponent<VideoPlayer>();
+        //StartCoroutine("ChangeText");
     }
 
     // Update is called once per frame
@@ -24,8 +27,19 @@ public class Load : MonoBehaviour
     {
         if (SceneManager.GetSceneByName("cL_Level_Scene").isLoaded)
         {
-                fade.FadeIn();
                 StartCoroutine("LoadGame");
+        }
+        if(videoP.time >= 61)
+        {
+            fade.FadeIn();
+        }
+        if (videoP.time >= 62)
+        {
+            if (!created)
+            {
+                SceneManager.LoadScene("cL_Level_Scene", LoadSceneMode.Additive);
+                created = true;
+            }
         }
     }
     IEnumerator ChangeText()
