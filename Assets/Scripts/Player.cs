@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
             {
                 lastObjSelection.GetComponent<Outline>().DeselectObj();
             }
+        }
     }
     void Controls()
     {
