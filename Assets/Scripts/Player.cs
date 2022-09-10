@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     Transform cam;
 
 
-    private void Awake()
+    /*private void Awake()
     {
         if (PlayerPrefs.HasKey("Volume"))
         {
@@ -30,7 +30,9 @@ public class Player : MonoBehaviour
         {
             Camera.main.GetComponent<Colorblind>().Type = PlayerPrefs.GetInt("Daltonic");
         }
-    }
+    }*/
+
+
     // Start is called before the first frame update
     void Start()
     {
