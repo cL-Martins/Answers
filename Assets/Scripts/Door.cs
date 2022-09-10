@@ -26,10 +26,17 @@ public class Door : MonoBehaviour
             open = !open;
             StopCoroutine("OpeningClosing");
             StartCoroutine("OpeningClosing");
+            if (open)
+            {
+                GetComponent<SoundEffects>().PlaySound(0);
+            } else
+            {
+                GetComponent<SoundEffects>().PlaySound(1);
+            }
         }
         else
         {
-            
+            GetComponent<SoundEffects>().PlaySound(2);
         }
     }
     void OpenKeyBoard()

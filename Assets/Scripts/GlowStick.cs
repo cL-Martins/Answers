@@ -10,6 +10,7 @@ public class GlowStick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<SoundEffects>().PlaySound(0);
         lightG = GetComponentInChildren<Light>();
         timer = duration;
     }
@@ -28,6 +29,7 @@ public class GlowStick : MonoBehaviour
     }
     public void TakeOff()
     {
+        GetComponent<SoundEffects>().PlaySound(1);
         gameObject.AddComponent<BoxCollider>();
         gameObject.GetComponentInChildren<SphereCollider>().radius = lightG.intensity/100;
         gameObject.AddComponent<Rigidbody>();

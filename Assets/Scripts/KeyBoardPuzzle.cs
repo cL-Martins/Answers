@@ -20,11 +20,13 @@ public class KeyBoardPuzzle : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
+            GetComponent<SoundEffects>().PlaySound(0);
             Finish();   
         }
     }
     void Interaction()
     {
+        GetComponent<SoundEffects>().PlaySound(1);
         keyBoardInterface.SetActive(true);
         GameController.mode = Phases.MouseActive;
         visor = GetComponentInChildren<TextMeshProUGUI>();
@@ -33,14 +35,17 @@ public class KeyBoardPuzzle : MonoBehaviour
     public void PressButton(string value)
     {
         visor.text += value;
+        GetComponent<SoundEffects>().PlaySound(2);
     }
     public void EnterPassword()
     {
         if (visor.text.Equals(password))
         {
+            GetComponent<SoundEffects>().PlaySound(3);
             Finish();
         } else
         {
+            GetComponent<SoundEffects>().PlaySound(4);
             visor.text = "";
         }
     }
