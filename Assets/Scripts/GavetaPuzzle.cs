@@ -18,6 +18,7 @@ public class GavetaPuzzle : MonoBehaviour
     }
     void Interaction()
     {
+        GetComponent<SoundEffects>().PlaySound(0);
         anim.SetBool("open", !anim.GetBool("open"));
     }
 }

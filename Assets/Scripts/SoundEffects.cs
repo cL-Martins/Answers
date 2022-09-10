@@ -7,7 +7,7 @@ public class SoundEffects : MonoBehaviour
     public AudioClip[] sounds;//Lista de sons
     AudioSource audioS;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         audioS = GetComponent<AudioSource>();
     }
