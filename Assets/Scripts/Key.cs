@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(Outline))]
+[RequireComponent(typeof(SoundEffects))]
 public class Key : MonoBehaviour
 {
     [Tooltip("Colocar o mesmo nome que está no script da porta")]

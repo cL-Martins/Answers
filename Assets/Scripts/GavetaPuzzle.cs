@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Outline))]
+[RequireComponent(typeof(SoundEffects))]
 public class GavetaPuzzle : MonoBehaviour
 {
     Animator anim;

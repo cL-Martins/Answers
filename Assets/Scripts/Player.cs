@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     float timeToMaxHeight = 0.5f;
     public float distanceInteraction = 3;
     float externalLight;
+    GameObject lastObjSelection;
 
     public GlowStickPack glowPack;
     Transform cam;
@@ -54,11 +55,21 @@ public class Player : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distanceInteraction))
         {
-            if (hit.collider.CompareTag("Interact") && Input.GetButtonDown("Fire1"))
-            {
-                hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
+            if (hit.collider.CompareTag("Interact")){
+                lastObjSelection = hit.collider.gameObject;
+                hit.collider.GetComponent<Outline>().SelectObj();
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    hit.collider.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
+                }
             }
-        }
+
+        } else
+        {
+            if (lastObjSelection != null)
+            {
+                lastObjSelection.GetComponent<Outline>().DeselectObj();
+            }
     }
     void Controls()
     {
