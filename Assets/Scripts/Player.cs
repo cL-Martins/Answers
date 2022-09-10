@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Wilberforce;
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour
 {
@@ -18,6 +19,18 @@ public class Player : MonoBehaviour
     public GlowStickPack glowPack;
     Transform cam;
 
+
+    private void Awake()
+    {
+        if (PlayerPrefs.HasKey("Volume"))
+        {
+            GameObject.Find("Music").GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Volume");
+        }
+        if (PlayerPrefs.HasKey("Daltonic"))
+        {
+            Camera.main.GetComponent<Colorblind>().Type = PlayerPrefs.GetInt("Daltonic");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

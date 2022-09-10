@@ -13,7 +13,8 @@ public class OptionsMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public Colorblind daltonic;
     public void SetVolume (float volume){
-        audioMixer.SetFloat("Volume",volume);        
+        audioMixer.SetFloat("Volume",volume);
+        PlayerPrefs.SetFloat("Volume", volume);
     }
     
     void FixedUpdate()
@@ -30,6 +31,7 @@ public class OptionsMenu : MonoBehaviour
         else if (tritanopia.isOn){
             daltonic.Type = 3;
         }
+        PlayerPrefs.SetInt("Daltonic", daltonic.Type);
     }
     
 }
