@@ -9,7 +9,7 @@ public class Key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,8 +19,7 @@ public class Key : MonoBehaviour
     }
     void Interaction()
     {
-        print("oi");
-        SoundEffects.PlaySound(SoundsList.CollectKey);
+        GetComponentInParent<SoundEffects>().PlaySound(0);
         GameController.CollectKey(doorName);
         gameObject.SetActive(false);
     }

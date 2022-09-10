@@ -24,6 +24,7 @@ public class NotesInventory : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && !notesController.note.activeSelf)
         {
+            GetComponent<SoundEffects>().PlaySound(0);
             inventory.SetActive(!inventory.activeSelf);
             if (inventory.activeSelf) 
             {

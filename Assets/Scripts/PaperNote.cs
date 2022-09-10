@@ -19,6 +19,7 @@ public class PaperNote : MonoBehaviour
     }
     void Interaction()
     {
+        GetComponent<SoundEffects>().PlaySound(0);
         GameController.RegisterNote(nameNote, message);
         notes.OpenNote(message);
         gameObject.SetActive(false);
