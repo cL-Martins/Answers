@@ -9,11 +9,12 @@ public enum States
 }
 public class Monster : MonoBehaviour
 {
-    public float range;
+    public Transform[] rooms;
+    public float range, distanceInteraction = 3;
     NavMeshAgent agent;
     States ia;
     GameObject player;
-    float distance, rangeFullShadow, timeDecision;
+    float distance, rangeFullShadow;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,15 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (ia)
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, distanceInteraction))
+        {
+            if (hit.collider.CompareTag("Interact"))
+            {
+                hit.collider.SendMessage("Interaction");
+            }
+        }
+            switch (ia)
         {
             case States.Locked:
 
@@ -39,7 +48,6 @@ public class Monster : MonoBehaviour
                     {
                         ia = States.Walking;
                         agent.destination = Vector3.zero;
-                        timeDecision = 3;
                     }
                 }
                 if(agent.remainingDistance <= agent.stoppingDistance)
@@ -51,15 +59,18 @@ public class Monster : MonoBehaviour
 
                 break;
             case States.Walking:
-                timeDecision += Time.deltaTime;
                 DetectPlayer();
-                if (timeDecision > 3)
+                if (agent.destination == null || agent.remainingDistance <= agent.stoppingDistance)
                 {
-                    StartCoroutine("DefaultMoviment");
-                    timeDecision = 0;
+                    Patrol();
                 }
                 break;
         }
+    }
+    void Patrol()
+    {
+       // agent.SetDestination(rooms[Random.Range(0, rooms.Length - 1)].position);
+        agent.SetDestination(rooms[7].position);
     }
     void DetectPlayer()
     {
@@ -71,24 +82,6 @@ public class Monster : MonoBehaviour
             {
                 ia = States.Walking;
             }
-    }
-    IEnumerator DefaultMoviment()
-    {
-        agent.SetDestination(RandomNavmeshLocation(40f));
-        yield return new WaitForSeconds(10);
-
-    }
-    public Vector3 RandomNavmeshLocation(float radius)
-    {
-        Vector3 randomDirection = Random.insideUnitSphere * radius;
-        randomDirection += transform.position;
-        NavMeshHit hit;
-        Vector3 finalPosition = Vector3.zero;
-        if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))
-        {
-            finalPosition = hit.position;
-        }
-        return finalPosition;
     }
     private void OnTriggerEnter(Collider other)
     {
