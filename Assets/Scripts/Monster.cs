@@ -15,13 +15,15 @@ public class Monster : MonoBehaviour
     States ia;
     GameObject player;
     float distance, rangeFullShadow;
+    Door doorLocked;
 
     // Start is called before the first frame update
     void Start()
     {
+        doorLocked = GameObject.FindGameObjectWithTag("DoorBoss").GetComponentInChildren<Door>();
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
-        ia = States.Walking;
+        ia = States.Locked;
     }
 
     // Update is called once per frame
@@ -41,7 +43,10 @@ public class Monster : MonoBehaviour
             switch (ia)
         {
             case States.Locked:
-
+                if (doorLocked.Open)
+                {
+                    ia = States.Walking;
+                }
                 break;
             case States.Chasing:
                 agent.SetDestination(player.transform.position);

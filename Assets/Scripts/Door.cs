@@ -12,6 +12,9 @@ public class Door : MonoBehaviour
     public float openingDegrees = -120;
     public float step = 1;
     float rotationZ;
+
+    public bool Open { get => open; set => open = value; }
+
     // Start is called before the first frame update
     void Start()
     {
