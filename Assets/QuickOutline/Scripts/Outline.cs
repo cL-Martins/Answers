@@ -97,6 +97,9 @@ public class Outline : MonoBehaviour {
 
     // Apply material properties immediately
     needsUpdate = true;
+
+        outlineWidth = 0;
+        UpdateMaterialProperties();
   }
 
   void OnEnable() {

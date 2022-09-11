@@ -8,6 +8,7 @@ public class PaperNote : MonoBehaviour
 {
     NotesController notes;
 
+    public GameObject book;
     public string nameNote, message;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,6 @@ public class PaperNote : MonoBehaviour
         GetComponent<SoundEffects>().PlaySound(0);
         GameController.RegisterNote(nameNote, message);
         notes.OpenNote(message);
-        gameObject.SetActive(false);
+        book.SetActive(false);
     }
 }
