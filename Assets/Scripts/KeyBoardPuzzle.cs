@@ -25,7 +25,8 @@ public class KeyBoardPuzzle : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             GetComponent<SoundEffects>().PlaySound(0);
-            Finish();   
+            GameController.mode = Phases.Control;
+            keyBoardInterface.SetActive(false);
         }
     }
     void Interaction()
@@ -59,7 +60,7 @@ public class KeyBoardPuzzle : MonoBehaviour
             GetComponent<SoundEffects>().PlaySound(4);
             for(int i = 0; i <= 5; i++)
             {
-
+                slots[i].sprite = null;
             }
         }
     }
