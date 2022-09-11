@@ -8,8 +8,6 @@ using TMPro;
 public class Load : MonoBehaviour
 {
     TextMeshProUGUI tmP;
-    public float timeTips;
-    public string[] tips;
     public Fade fade;
     int indice;
     bool created;
@@ -19,13 +17,12 @@ public class Load : MonoBehaviour
     {
         tmP = GetComponentInChildren<TextMeshProUGUI>();
         videoP = GetComponent<VideoPlayer>();
-        //StartCoroutine("ChangeText");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetSceneByName("cL_Level_Scene").isLoaded)
+        if (SceneManager.GetSceneByName("TrueLoad").isLoaded)
         {
                 StartCoroutine("LoadGame");
         }
@@ -37,32 +34,14 @@ public class Load : MonoBehaviour
         {
             if (!created)
             {
-                SceneManager.LoadScene("cL_Level_Scene", LoadSceneMode.Additive);
+                SceneManager.LoadScene("TrueLoad", LoadSceneMode.Additive);
                 created = true;
             }
         }
     }
-    IEnumerator ChangeText()
-    {
-        tmP.text = tips[indice];
-        if (indice < tips.Length -1)
-        {
-            indice++;
-        } else
-        {
-            indice = 0;
-        }
-        if (!created)
-        {
-            SceneManager.LoadScene("cL_Level_Scene", LoadSceneMode.Additive);
-            created = true;
-        }
-        yield return new WaitForSeconds(timeTips);
-        StartCoroutine("ChangeText");
-    }
     IEnumerator LoadGame()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         SceneManager.UnloadSceneAsync("Load");
     }
 }
