@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
@@ -13,15 +14,27 @@ public class MenuController : MonoBehaviour
     public GameObject fade;
     bool ativaMenu = true;
     public Animator anim;
+    public Image warning;
+    float timeWarning;
     // Start is called before the first frame update
     void Start()
     {
         backGround = GetComponent<VideoPlayer>();
+        warning.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        if (warning.enabled)
+        {
+            timeWarning += Time.deltaTime;
+            if (timeWarning > 8)
+            {
+                backGround.Play();
+                warning.enabled = false;
+            }
+        }
         if (ativaMenu){
             buttons.SetActive(backGround.time >= 12);
         }else{
