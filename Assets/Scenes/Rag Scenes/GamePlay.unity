@@ -8183,10 +8183,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bichao
       objectReference: {fileID: 0}
-    - target: {fileID: 8480524751578460133, guid: 35e16284e304c374b9c92cb52fd297e3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e16284e304c374b9c92cb52fd297e3, type: 3}
 --- !u!1001 &8882076930568488231

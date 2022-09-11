@@ -32,7 +32,10 @@ public class Monster : MonoBehaviour
         {
             if (hit.collider.CompareTag("Interact"))
             {
+                //agent.speed = 0;
                 hit.collider.SendMessage("Interaction");
+                //StartCoroutine("ReAcellerate");
+                
             }
         }
             switch (ia)
@@ -82,6 +85,15 @@ public class Monster : MonoBehaviour
             {
                 ia = States.Walking;
             }
+    }
+    IEnumerator ReAcellerate()
+    {
+        print("oi");
+        for(int i = 0; i < agent.speed; i++)
+        {
+            agent.speed = i / 10;
+        }
+        yield return new WaitForSeconds(1);
     }
     private void OnTriggerEnter(Collider other)
     {
