@@ -37,22 +37,21 @@ public class Lever : MonoBehaviour
                 leverController.Alarm = 1;
                 break;
             case Levers.Battery:
-                if (leverController.Alarm == 1)
+                if (leverController.Battery == 1)
                 {
                     if(idBattery == lastIdBattery)
                     {
-                        print(leverController.Battery);
                         leverController.Battery = 0;
+                        print(leverController.Battery);
                     } else
                     {
+                        leverController.Battery = 2;
                         print(leverController.Battery);
-                        leverController.Battery += 1;
                     }
                 }
                 else
                 {
-                    print(leverController.Battery);
-                    leverController.Battery += 1;
+                    leverController.Battery = 1;
                     lastIdBattery = idBattery;
                 }
                 
@@ -66,12 +65,12 @@ public class Lever : MonoBehaviour
                     }
                     else
                     {
-                        leverController.Door += 1;
+                        leverController.Door = 2;
                     }
                 }
                 else
                 {
-                    leverController.Door += 1;
+                    leverController.Door = 1;
                     lastIdDoor = idDoor;
                 }
                 break;
