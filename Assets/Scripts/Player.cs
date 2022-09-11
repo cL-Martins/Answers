@@ -150,6 +150,7 @@ public class Player : MonoBehaviour
         {
             externalLight += other.GetComponent<Light>().intensity;
         }
+        print(other.name);
     }
     private void OnTriggerExit(Collider other)
     {

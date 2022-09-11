@@ -50,7 +50,7 @@ public class Door : MonoBehaviour
         StopCoroutine("OpeningClosing");
         StartCoroutine("OpeningClosing");
     }
-    IEnumerator OpeningClosing()
+    public IEnumerator OpeningClosing()
     {
         yield return new WaitForEndOfFrame();
         if (open)
