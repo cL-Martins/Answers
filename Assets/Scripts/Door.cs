@@ -47,6 +47,9 @@ public class Door : MonoBehaviour
     void OpenKeyBoard()
     {
         open = !open;
+        doorName = "";
+        GetComponent<SoundEffects>().PlaySound(1);
+
     }
     public IEnumerator OpeningClosing()
     {

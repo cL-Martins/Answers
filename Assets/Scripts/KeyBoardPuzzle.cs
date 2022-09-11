@@ -37,28 +37,30 @@ public class KeyBoardPuzzle : MonoBehaviour
     }
     public void PressButton(string value)
     {
-        if (idVisor < 5)
+        if (idVisor < 7)
         {
             GetComponent<SoundEffects>().PlaySound(2);
             slots[idVisor].sprite = alphabet[int.Parse(value)];
             passwordEntered += value;
+            idVisor++;
         }
-        idVisor++;
-        if(idVisor == 5)
+        if(idVisor >= 7)
         {
             EnterPassword();
         }
     }
     public void EnterPassword()
     {
+        idVisor = 0;
         if (passwordEntered.Equals(password))
         {
             GetComponent<SoundEffects>().PlaySound(3);
             Finish();
         } else
         {
+            passwordEntered = "";
             GetComponent<SoundEffects>().PlaySound(4);
-            for(int i = 0; i <= 5; i++)
+            for(int i = 0; i <= 7; i++)
             {
                 slots[i].sprite = null;
             }

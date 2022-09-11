@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 public enum States
 {
-    Locked, Chasing, FullShadow, Walking
+    Locked, Chasing, FullShadow, Walking, FullChase
 }
 public class Monster : MonoBehaviour
 {
@@ -73,12 +73,14 @@ public class Monster : MonoBehaviour
                     Patrol();
                 }
                 break;
+            case States.FullChase:
+                agent.SetDestination(player.transform.position);
+                break;
         }
     }
     void Patrol()
     {
-       // agent.SetDestination(rooms[Random.Range(0, rooms.Length - 1)].position);
-        agent.SetDestination(rooms[7].position);
+        agent.SetDestination(rooms[Random.Range(0, rooms.Length - 1)].position);
     }
     void DetectPlayer()
     {
