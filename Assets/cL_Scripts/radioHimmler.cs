@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class radioHimmler : MonoBehaviour
@@ -17,7 +18,13 @@ public class radioHimmler : MonoBehaviour
         {
             _radioHimmler.Play();
             _controllMusic = true;
-
+            StartCoroutine(RadioHimmlerStop());
         }
+    }
+
+    IEnumerator RadioHimmlerStop()
+    {
+        yield return new WaitForSeconds(10);
+        _radioHimmler.Stop();
     }
 }
