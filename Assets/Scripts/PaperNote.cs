@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Outline))]
 [RequireComponent(typeof(SoundEffects))]
+[RequireComponent(typeof(BoxCollider))]
 public class PaperNote : MonoBehaviour
 {
     NotesController notes;
