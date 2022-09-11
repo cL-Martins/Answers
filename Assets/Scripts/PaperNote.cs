@@ -7,9 +7,7 @@ using UnityEngine;
 public class PaperNote : MonoBehaviour
 {
     NotesController notes;
-
-    public GameObject book;
-    public string nameNote, message;
+    public int id;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +21,8 @@ public class PaperNote : MonoBehaviour
     void Interaction()
     {
         GetComponent<SoundEffects>().PlaySound(0);
-        GameController.RegisterNote(nameNote, message);
-        notes.OpenNote(message);
-        book.SetActive(false);
+        GameController.RegisterNote(id);
+        notes.OpenNote(id);
+        gameObject.SetActive(false);
     }
 }

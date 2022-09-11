@@ -38,24 +38,26 @@ public class NotesInventory : MonoBehaviour
     }
     void OpenInventory()
     {
-        for (int i = 0; i < gc.IdsNotes; i++)
+        for (int i = 0; i < gc.IndiceNotes; i++)
         {
-            notesList = new GameObject[gc.IdsNotes];
+            notesList = new GameObject[gc.IndiceNotes];
             if(i <= 12)
             {
                 notesList[i] = Instantiate(notesButton, notes[0].transform);
+                notesList[i].GetComponent<NoteSelection>().id = gc.IdsNotes[i];
             } else if(i <= 24)
             {
                 notesList[i] = Instantiate(notesButton, notes[1].transform);
+                notesList[i].GetComponent<NoteSelection>().id = gc.IdsNotes[i];
             } else if(i <= 36)
             {
                 notesList[i] = Instantiate(notesButton, notes[2].transform);
+                notesList[i].GetComponent<NoteSelection>().id = gc.IdsNotes[i];
             } else
             {
                 notesList[i] = Instantiate(notesButton, notes[3].transform);
+                notesList[i].GetComponent<NoteSelection>().id = gc.IdsNotes[i];
             }
-            notesList[i].GetComponent<TextMeshProUGUI>().text = gc.NotesNames[i];
-            notesList[i].GetComponent<NoteSelection>().Message = gc.NotesDescription[i];
         }
     }
 }

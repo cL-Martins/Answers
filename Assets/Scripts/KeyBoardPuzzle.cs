@@ -24,14 +24,13 @@ public class KeyBoardPuzzle : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            GetComponent<SoundEffects>().PlaySound(0);
             GameController.mode = Phases.Control;
             keyBoardInterface.SetActive(false);
         }
     }
     void Interaction()
     {
-        GetComponent<SoundEffects>().PlaySound(1);
+        GetComponent<SoundEffects>().PlaySound(0);//Abrir o teclado
         keyBoardInterface.SetActive(true);
         GameController.mode = Phases.MouseActive;
     }
@@ -39,7 +38,7 @@ public class KeyBoardPuzzle : MonoBehaviour
     {
         if (idVisor < 7)
         {
-            GetComponent<SoundEffects>().PlaySound(2);
+            GetComponent<SoundEffects>().PlaySound(1);//Apertar botão
             slots[idVisor].sprite = alphabet[int.Parse(value)];
             passwordEntered += value;
             idVisor++;
@@ -54,12 +53,12 @@ public class KeyBoardPuzzle : MonoBehaviour
         idVisor = 0;
         if (passwordEntered.Equals(password))
         {
-            GetComponent<SoundEffects>().PlaySound(3);
+            GetComponent<SoundEffects>().PlaySound(2);//Acerta a senha
             Finish();
         } else
         {
             passwordEntered = "";
-            GetComponent<SoundEffects>().PlaySound(4);
+            GetComponent<SoundEffects>().PlaySound(3);// Erra a senha
             for(int i = 0; i <= 7; i++)
             {
                 slots[i].sprite = null;

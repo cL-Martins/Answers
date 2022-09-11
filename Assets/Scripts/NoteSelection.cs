@@ -1,24 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class NoteSelection : MonoBehaviour
 {
-    string message;
     NotesController controller;
-    TextMeshProUGUI tmP;
-
-    private Color originalColor;
-    public Color highlightedTextColor;
-    public string Message { get => message; set => message = value; }
+    Image image;
+    public int id;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = FindObjectOfType(typeof(NotesController)) as NotesController;
-        tmP = GetComponent<TextMeshProUGUI>();
-        originalColor = tmP.color;
+        image = GetComponent<Image>();
+        image.sprite = controller.books[id];
     }
 
     // Update is called once per frame
@@ -29,16 +25,8 @@ public class NoteSelection : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    public void OnMouseDown()
+    public void Active()
     {
-        controller.OpenNote(message);
-    }
-    private void OnMouseOver()
-    {
-        tmP.color = Color.blue;//Precisa de ajuste
-    }
-    private void OnMouseExit()
-    {
-        tmP.color = originalColor;
+        controller.OpenNote(id);
     }
 }

@@ -13,6 +13,7 @@ public class LeverController : MonoBehaviour
     AudioSource alarmAudio;
     //ParticleSystem gasParticle;
     public GameObject gasParticle;
+    public Monster boss;
     public Animator glassDoor;
 
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class LeverController : MonoBehaviour
         {
             if (!alarmAudio.isPlaying)
             {
+                boss.Ia = States.FullChase;
                 alarmAudio.Play();
             }
         }

@@ -15,6 +15,7 @@ public class NarrativeTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             audioS.PlayOneShot(sound);
+            GameController.mode = Phases.Narrative;
             gameObject.SetActive(false);
         }
     }

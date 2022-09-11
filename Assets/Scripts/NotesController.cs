@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 public class NotesController : MonoBehaviour
 {
     TextMeshProUGUI tmP;
     public GameObject note;
+    public Sprite[] notes, books;
     float timer;
     // Start is called before the first frame update
     void Start()
@@ -28,14 +30,10 @@ public class NotesController : MonoBehaviour
             GameController.mode = Phases.Control;
         }
     }
-    public void OpenNote(string txt)
+    public void OpenNote(int choice)
     {
         GameController.mode = Phases.DontControl;
         note.SetActive(true);
-        if(tmP == null)
-        {
-            tmP = GetComponentInChildren<TextMeshProUGUI>();
-        }
-        tmP.text = txt;
+        note.GetComponent<Image>().sprite = notes[choice];
     }
 }

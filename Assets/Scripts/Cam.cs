@@ -33,7 +33,7 @@ public class Cam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.mode.Equals(Phases.Control) || GameController.mode.Equals(Phases.Die))
+        if (GameController.mode.Equals(Phases.Control) || GameController.mode.Equals(Phases.Die) || GameController.mode.Equals(Phases.Narrative))
         {
             float verticalDelta = Input.GetAxisRaw("Mouse Y") * sensitivityY;
             float horizontalDelta = Input.GetAxisRaw("Mouse X") * sensitivityX;

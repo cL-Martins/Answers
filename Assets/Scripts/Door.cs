@@ -26,6 +26,7 @@ public class Door : MonoBehaviour
     }
     void Interaction()
     {
+
         if (doorName.Equals("") || GameController.CheckKey(doorName))
         {
             open = !open;
@@ -33,22 +34,21 @@ public class Door : MonoBehaviour
             StartCoroutine("OpeningClosing");
             if (open)
             {
-                GetComponent<SoundEffects>().PlaySound(0);
+                GetComponent<SoundEffects>().PlaySound(0);//Abrindo
             } else
             {
-                GetComponent<SoundEffects>().PlaySound(1);
+                GetComponent<SoundEffects>().PlaySound(1);//Fechando
             }
         }
         else
         {
-            GetComponent<SoundEffects>().PlaySound(2);
+            GetComponent<SoundEffects>().PlaySound(2);//FOrçando
         }
     }
     void OpenKeyBoard()
     {
-        open = !open;
         doorName = "";
-        GetComponent<SoundEffects>().PlaySound(1);
+        GetComponent<SoundEffects>().PlaySound(3);//Destrancar
 
     }
     public IEnumerator OpeningClosing()

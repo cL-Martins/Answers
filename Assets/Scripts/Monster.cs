@@ -17,6 +17,8 @@ public class Monster : MonoBehaviour
     float distance, rangeFullShadow;
     Door doorLocked;
 
+    public States Ia { get => ia; set => ia = value; }
+
     // Start is called before the first frame update
     void Start()
     {
