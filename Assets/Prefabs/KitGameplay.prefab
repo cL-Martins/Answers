@@ -1283,7 +1283,7 @@ MonoBehaviour:
   staminaQtdLoss: 4
   staminaQtdGain: 2
   stamina: 100
-  distanceInteraction: 3.5
+  distanceInteraction: 1.5
   glowPack: {fileID: 8481041589834033094}
 --- !u!1 &6461361072419666398
 GameObject:
@@ -1298,6 +1298,7 @@ GameObject:
   - component: {fileID: 6461361072419666399}
   - component: {fileID: 6461361072419666386}
   - component: {fileID: 8481041589834033094}
+  - component: {fileID: 42260672}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1399,6 +1400,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glowStickNumber: 15
   glowStick: {fileID: 3599857450236722164, guid: 2d2eccf37ed3d3443a87320a43510cb1, type: 3}
+--- !u!114 &42260672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461361072419666398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae42c8f78c60684aab6be6c18bd7a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  colorblindShader: {fileID: 4800000, guid: b35b8f7ae8cf168488129d5f5f39ebf4, type: 3}
 --- !u!1 &6461361072505055709
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GlowStick : MonoBehaviour
 {
     public float duration = 50;
-    float timer, intensity = 1.5f;
+    float timer, range = 10f;
     Light lightG;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class GlowStick : MonoBehaviour
     void Update()
     {
             timer -= Time.deltaTime;
-            lightG.intensity = intensity * timer / duration;
+            lightG.range = range * timer / duration;
             if(timer <= 0 && gameObject.layer == 6)
             {
             TakeOff();
