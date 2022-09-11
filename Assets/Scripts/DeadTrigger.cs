@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+[RequireComponent(typeof(SoundEffects))]
 public class DeadTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -18,7 +18,24 @@ public class DeadTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //Falta adicionar gatilho sonoro e efeito de fade na tela
+        if (other.CompareTag("Player"))
+        {
+            transform.position = other.transform.position;
+            GetComponent<Animator>().SetTrigger("activate");
+            GameController.mode = Phases.Die;
+        }
+        
+    }
+    public void Particles()
+    {
+        GetComponentInChildren<ParticleSystem>().Play();
+    }
+    public void JumpScare()
+    {
+        GetComponent<SoundEffects>().PlaySound(0);
+    }
+    public void Death()
+    {
         SceneManager.LoadScene("GameOver");
     }
 }

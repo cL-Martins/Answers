@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum Phases
 {
-    Control, DontControl, MouseActive
+    Control, DontControl, MouseActive, Die
 }
 public class GameController : MonoBehaviour
 {
