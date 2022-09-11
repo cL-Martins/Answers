@@ -9,6 +9,7 @@ TagManager:
   - DoorBoss
   - Lever1
   - Lever2
+  - Gas
   layers:
   - Default
   - TransparentFX

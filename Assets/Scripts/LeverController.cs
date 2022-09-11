@@ -13,13 +13,12 @@ public class LeverController : MonoBehaviour
     AudioSource alarmAudio;
     //ParticleSystem gasParticle;
     public GameObject gasParticle;
-    public Door glassDoor;
+    public Animator glassDoor;
 
     // Start is called before the first frame update
     void Start()
     {
         alarmAudio = GetComponent<AudioSource>();
-        //gasParticle = GetComponentInChildren<ParticleSystem>();
         battery = 0;
         door = 0;
         alarm = 0;
@@ -45,12 +44,10 @@ public class LeverController : MonoBehaviour
         }
         if(battery == 2)
         {
-            print("Ligou");
+            
             if (door == 2)
             {
-                print("Abriu");
-                //glassDoor.Open = true;
-                //glassDoor.StartCoroutine("OpeningClosing");
+                glassDoor.SetTrigger("open");
             }
         }
     }

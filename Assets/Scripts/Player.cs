@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Wilberforce;
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour
@@ -71,6 +72,10 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distanceInteraction))
         {
             if (hit.collider.CompareTag("Interact")){
+                if (lastObjSelection != null)
+                {
+                    lastObjSelection.GetComponent<Outline>().DeselectObj();
+                }
                 lastObjSelection = hit.collider.gameObject;
                 hit.collider.GetComponent<Outline>().SelectObj();
                 if (Input.GetButtonDown("Fire1"))
@@ -150,7 +155,11 @@ public class Player : MonoBehaviour
         {
             externalLight += other.GetComponent<Light>().intensity;
         }
-        print(other.name);
+        if (other.CompareTag("Gas"))
+        {
+            StartCoroutine("Dying");
+
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -158,6 +167,11 @@ public class Player : MonoBehaviour
         {
             externalLight -= other.GetComponent<Light>().intensity;
         }
+    }
+    IEnumerator Dying()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("GameOver");
     }
 
 }

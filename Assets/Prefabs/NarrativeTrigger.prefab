@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 822098689504221750}
   - component: {fileID: 822098689504221751}
   - component: {fileID: 822098689504221747}
+  - component: {fileID: 8639397666328423758}
   m_Layer: 0
   m_Name: NarrativeTrigger
   m_TagString: Untagged
@@ -109,3 +110,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: e8223e27612fb4a68a77694a4012fbad, type: 3}
+--- !u!95 &8639397666328423758
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822098689504221748}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f15b88d2a0d7234db19ddf9b4526a3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
