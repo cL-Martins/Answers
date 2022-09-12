@@ -6,7 +6,7 @@ using TMPro;
 
 public class NotesInventory : MonoBehaviour
 {
-    public GameObject inventory, notesButton;
+    public GameObject inventory, glowInventory, notesButton;
     public GameObject[] notes;
     GameController gc;
     NotesController notesController;
@@ -26,6 +26,7 @@ public class NotesInventory : MonoBehaviour
         {
             GetComponent<SoundEffects>().PlaySound(0);
             inventory.SetActive(!inventory.activeSelf);
+            glowInventory.SetActive(!glowInventory.activeSelf);
             if (inventory.activeSelf) 
             {
                 OpenInventory();
