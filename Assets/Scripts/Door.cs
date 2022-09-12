@@ -23,10 +23,6 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire2"))
-        {
-            doorName = "";
-        }
     }
     void Interaction()
     {
