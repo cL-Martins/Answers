@@ -5,6 +5,7 @@ public class NarrativeTrigger : MonoBehaviour
 {
     AudioSource audioS;
     public AudioClip sound;
+    public bool lockPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,10 @@ public class NarrativeTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             audioS.PlayOneShot(sound);
-            GameController.mode = Phases.Narrative;
+            if (lockPlayer)
+            {
+                GameController.mode = Phases.Narrative;
+            }
             gameObject.SetActive(false);
         }
     }
