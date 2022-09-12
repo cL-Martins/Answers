@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, distanceInteraction))
         {
             if (hit.collider.CompareTag("Interact")){
+
                 if (lastObjSelection != null)
                 {
                     lastObjSelection.GetComponent<Outline>().DeselectObj();

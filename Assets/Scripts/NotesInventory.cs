@@ -41,15 +41,15 @@ public class NotesInventory : MonoBehaviour
         for (int i = 0; i < gc.IndiceNotes; i++)
         {
             notesList = new GameObject[gc.IndiceNotes];
-            if(i <= 12)
+            if(i <= 3)
             {
                 notesList[i] = Instantiate(notesButton, notes[0].transform);
                 notesList[i].GetComponent<NoteSelection>().id = gc.IdsNotes[i];
-            } else if(i <= 24)
+            } else if(i <= 6)
             {
                 notesList[i] = Instantiate(notesButton, notes[1].transform);
                 notesList[i].GetComponent<NoteSelection>().id = gc.IdsNotes[i];
-            } else if(i <= 36)
+            } else if(i <= 9)
             {
                 notesList[i] = Instantiate(notesButton, notes[2].transform);
                 notesList[i].GetComponent<NoteSelection>().id = gc.IdsNotes[i];
