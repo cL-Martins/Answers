@@ -16,7 +16,8 @@ public class KeyBoardPuzzle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        passwordEntered = "";
+        idVisor = 0;
     }
 
     // Update is called once per frame

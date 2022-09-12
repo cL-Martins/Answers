@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class PaperNote : MonoBehaviour
 {
+    public GameObject book;
     NotesController notes;
     public int id;
     // Start is called before the first frame update
@@ -23,6 +24,6 @@ public class PaperNote : MonoBehaviour
         GetComponent<SoundEffects>().PlaySound(0);
         GameController.RegisterNote(id);
         notes.OpenNote(id);
-        gameObject.SetActive(false);
+        book.SetActive(false);
     }
 }
