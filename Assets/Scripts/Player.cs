@@ -73,6 +73,7 @@ public class Player : MonoBehaviour
         {
             if (hit.collider.CompareTag("Interact")){
 
+
                 if (lastObjSelection != null)
                 {
                     lastObjSelection.GetComponent<Outline>().DeselectObj();
